@@ -1,0 +1,9 @@
+{
+  "name": "fb-page-publisher-mcp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Servidor MCP para publicar posts orgânicos numa Página do Facebook via Graph API.",
+  "engines": {
+    "node": ">=18"
+  }
+}
