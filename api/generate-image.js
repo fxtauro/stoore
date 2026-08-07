@@ -35,13 +35,13 @@ export default async function handler(req, res) {
   const logoMeta = await sharp(resizedLogo).metadata();
 
   const margin = Math.round(imgWidth * 0.03);
-  const padding = Math.round(logoWidth * 0.12);
+  const padding = Math.round(logoWidth * 0.06);
   const plateWidth = logoMeta.width + padding * 2;
   const plateHeight = logoMeta.height + padding * 2;
   const plateRadius = Math.round(plateHeight * 0.2);
 
   const plateSvg = `<svg width="${plateWidth}" height="${plateHeight}">
-    <rect width="${plateWidth}" height="${plateHeight}" rx="${plateRadius}" ry="${plateRadius}" fill="white" fill-opacity="0.75"/>
+    <rect width="${plateWidth}" height="${plateHeight}" rx="${plateRadius}" ry="${plateRadius}" fill="white" fill-opacity="0.95"/>
   </svg>`;
 
   const left = imgWidth - plateWidth - margin;
