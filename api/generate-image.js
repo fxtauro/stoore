@@ -8,7 +8,9 @@ export default async function handler(req, res) {
     {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] }),
+      body: JSON.stringify({
+  contents: [{ parts: [{ text: `Generate a photorealistic image: ${prompt}` }] }],
+  }),
     }
   );
   const data = await geminiRes.json();
