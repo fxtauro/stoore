@@ -5,5 +5,8 @@
   "description": "Servidor MCP para publicar posts orgânicos numa Página do Facebook via Graph API.",
   "engines": {
     "node": ">=20"
+  },
+  "dependencies": {
+    "@vercel/blob": "latest"
   }
 }
