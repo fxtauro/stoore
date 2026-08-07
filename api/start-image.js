@@ -21,7 +21,7 @@ async function generateAndStore(jobId, prompt) {
     const part = data?.candidates?.[0]?.content?.parts?.find((p) => p.inlineData);
 
     if (!part) {
-      await put(`job-${jobId}.json`, JSON.stringify({ status: 'error', message: 'sem imagem gerada' }), {
+      await put(`job-${jobId}.json`, JSON.stringify({ status: 'error', message: 'sem imagem gerada', raw: data }), {
         access: 'public',
         contentType: 'application/json',
         allowOverwrite: true,
